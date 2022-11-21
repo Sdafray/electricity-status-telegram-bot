@@ -5,4 +5,5 @@ if [ ! -f "$ENV_FILE" ]; then
   return
 fi
 
+poetry export -o requirements.txt --without-hashes
 docker compose up --build -d
