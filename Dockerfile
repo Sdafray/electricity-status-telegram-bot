@@ -2,10 +2,10 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY pyproject.toml pdm.lock ./
-
-RUN pip install pdm && pdm install
-
 COPY . .
+RUN apt-get update && apt-get install -y iputils-ping
+CMD bash
 
-CMD pdm run python src
+RUN pip install -r requirements.txt
+
+CMD python src

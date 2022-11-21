@@ -2,7 +2,7 @@ from envparse import env
 
 env.read_envfile()
 
-GET_IP_URL = 'https://2ip.io'
+GET_IP_URL = env('GET_IP_URL')
 
 CHECK_INTERVAL = int(env('CHECK_INTERVAL', default=2)) * 60
 
