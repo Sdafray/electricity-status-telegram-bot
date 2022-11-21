@@ -2,16 +2,17 @@ import re
 from datetime import datetime
 
 from aiogram import types
-import config
+from aiogram.types import InlineKeyboardMarkup
+from aiogram.types.web_app_info import WebAppInfo
+from aiogram_utils.keyboards import InlineKeyboardButton
+
 import commands
+import config
 import documents
 import texts
 import utils
 from loader import dp
 from utils import is_network_active
-from aiogram.types.web_app_info import WebAppInfo
-from aiogram_utils.keyboards import InlineKeyboardButton
-from aiogram.types import InlineKeyboardMarkup
 
 
 class GetMyIp(InlineKeyboardMarkup):
